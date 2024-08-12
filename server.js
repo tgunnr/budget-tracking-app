@@ -14,6 +14,8 @@ import './config/database.js'
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as usersRouter } from './routes/users.js'
+import { router as authRouter } from './routes/auth.js'
+import { router as budgetsRouter } from './routes/budget.js'
 
 // create the express app
 const app = express()
@@ -30,10 +32,24 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(methodOverride('_method'))
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    store: MongoStore.create({
+      mongoUrl: process.env.DATABASE_URL
+    })
+  })
+)
+app.use(passUserToView)
 
 // mount imported routes
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
+app.use('/auth', authRouter)
+app.use('/budgets', budgetsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

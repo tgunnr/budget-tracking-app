@@ -5,6 +5,7 @@ import * as budgetsCtrl from '../controllers/budgets.js'
 const router = Router()
 
 // public routes
+router.get('/', budgetsCtrl.index)
 
 // protected routes
 

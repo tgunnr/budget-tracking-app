@@ -13,7 +13,8 @@ const expenseSchema = new Schema({
 const budgetSchema = new Schema({
   name: String,
   complete: Boolean,
-  expenses: [expenseSchema]
+  expenses: [expenseSchema],
+  owner: {type: Schema.Types.ObjectId, ref: 'User'}
 }, {
   timestamps: true
 })

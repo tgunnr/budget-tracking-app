@@ -1,5 +1,5 @@
-import { Budget } from "../model/budget"
+import { Budget } from "../models/budget.js"
 
 export {
-  
+
 }

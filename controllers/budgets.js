@@ -12,8 +12,32 @@ async function index(req, res) {
   }
 }
 
+async function show(req, res) {
+  try {
+    const budget = await Budget.findById(req.params.budgetId)
+    res.render('budgets/show', (
+      budget
+    ))
+  } catch (error) {
+    console.log(error)
+    res.redirect('/budgets')
+  }
+}
 
+async function create(req, res) {
+  try {
+    req.body.budg = !!req.body.budg
+    req.body.owner = req.session.user._id
+    await Budget.create(req.body)
+    res.redirect('/budgets')
+  } catch (error) {
+    console.log(error)
+    res.redirect('/')
+  }
+}
 
 export {
   index,
+  show,
+  create,
 }

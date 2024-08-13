@@ -29,7 +29,7 @@ async function create(req, res) {
     req.body.budg = !!req.body.budg
     req.body.owner = req.session.user._id
     await Budget.create(req.body)
-    res.redirect('/budgets/create-budget')
+    res.redirect('/budgets')
   } catch (error) {
     console.log(error)
     res.redirect('/')

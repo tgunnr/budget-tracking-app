@@ -1,22 +1,4 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <p>Welcome! <%= user.username %></p>
-  <% if (user) { %>
-    <h2>New Budget</h2>
-    <form action="/budgets" method="POST">
-      <label>
-        Name: 
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <label>
-        Complete?
-        <input type="checkbox" name="complete">
-      </label>
-      <button type="submit">Add Budget</button>
-    </form>
-  <% } %>
-</section>
-
 <%- include('../partials/footer') %>

@@ -1,5 +1,10 @@
 import { Budget } from "../models/budget.js"
 
+function newBudget(req, res) {
+  res.render('budgets/new', {
+  })
+}
+
 async function index(req, res) {
   try {
     const budgets = await Budget.find({})
@@ -15,6 +20,7 @@ async function index(req, res) {
 async function show(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
+    .populate(['owner'])
     res.render('budgets/show', (
       budget
     ))
@@ -26,10 +32,10 @@ async function show(req, res) {
 
 async function create(req, res) {
   try {
-    req.body.budg = !!req.body.budg
+    req.body.complete = !!req.body.complete
     req.body.owner = req.session.user._id
     await Budget.create(req.body)
-    res.redirect('/budgets')
+    res.redirect('/budgets/new')
   } catch (error) {
     console.log(error)
     res.redirect('/')
@@ -40,4 +46,5 @@ export {
   index,
   show,
   create,
+  newBudget as new,
 }

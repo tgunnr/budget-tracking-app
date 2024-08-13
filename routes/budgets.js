@@ -9,5 +9,7 @@ router.get('/', budgetsCtrl.index)
 
 // protected routes
 router.get('/:budgetId', isSignedIn, budgetsCtrl.show)
+router.post('/', isSignedIn, budgetsCtrl.create)
+router.get('/new', isSignedIn, budgetsCtrl.new)
 
 export { router }

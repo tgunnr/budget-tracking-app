@@ -8,7 +8,6 @@ const router = Router()
 router.get('/', budgetsCtrl.index)
 
 // protected routes
-router.get('/:budgetId')
-router.post('/', isSignedIn, budgetsCtrl.create)
+router.get('/:budgetId', isSignedIn, budgetsCtrl.show)
 
 export { router }

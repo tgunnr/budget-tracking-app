@@ -14,8 +14,9 @@ async function index(req, res) {
 
 async function show(req, res) {
   try {
-    const budget = await Budget.findById(req.params.budgetId)
-    .populate(['owner'])
+    const budget = await Budget.findById(req.params.budgetId).populate('owner')
+    console.log(budget)
+    
     res.render('budgets/show', (
       budget
     ))
@@ -86,6 +87,20 @@ async function edit(req, res) {
   }
 }
 
+async function addExpense(req, res) {
+  try {
+    const budget = await Budget.findById(req.params.budgetId)
+    req.body.author = req.session.user._id
+    Budget.comments.push(req.body)
+    await budget.save()
+    res.redirect(`/budgets/${budget._id}`)
+  } catch (error) {
+    console.log(error)
+    res.redirect('/budgets')
+  }
+}
+
+
 export {
   index,
   show,
@@ -93,5 +108,6 @@ export {
   update,
   complete,
   deleteBudget as delete,
-  edit
+  edit,
+  addExpense
 }

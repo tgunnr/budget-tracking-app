@@ -1,9 +1,5 @@
 import { Budget } from "../models/budget.js"
 
-function newBudget(req, res) {
-  res.render('budgets/new')
-}
-
 async function index(req, res) {
   try {
     const budgets = await Budget.find({})
@@ -45,5 +41,4 @@ export {
   index,
   show,
   create,
-  newBudget as new,
 }

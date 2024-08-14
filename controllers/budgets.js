@@ -48,9 +48,23 @@ async function update(req, res) {
   }
 }
 
+async function complete(req, res) {
+  try {
+    const budget = await Budget.findById(req.params.budgetId)
+    budget.complete = !budget.complete
+    await budget.save(
+    res.redirect(`/budgets/${budget._id}`)
+    )
+  } catch (error) {
+    console.lof(error)
+    res.redirect('/budgets')
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
+  complete
 }

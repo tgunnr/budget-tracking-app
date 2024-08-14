@@ -12,5 +12,6 @@ router.get('/:budgetId', isSignedIn, budgetsCtrl.show)
 router.post('/', isSignedIn, budgetsCtrl.create)
 router.put('/:budgetId', isSignedIn, budgetsCtrl.update)
 router.patch('/:budgetId/complete', isSignedIn, budgetsCtrl.complete)
+router.delete('/:budgetId', isSignedIn, budgetsCtrl.delete)
 
 export { router }

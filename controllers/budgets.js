@@ -61,10 +61,24 @@ async function complete(req, res) {
   }
 }
 
+async function deleteBudget(req, res) {
+  try {
+    const budget = await Budget.findById(req.params.budgetId)
+    if (budget.owner.equals(req.session.user._id)) {
+      await budget.deleteOne()
+      res.redirect('/budgets')
+    }
+  } catch (error) {
+    console.log(error)
+    res.redirect('/budgets')
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
-  complete
+  complete,
+  deleteBudget as delete
 }

@@ -74,11 +74,24 @@ async function deleteBudget(req, res) {
   }
 }
 
+async function edit(req, res) {
+  try {
+    const budget = await Budget.findById(req.params,budgetId)
+    res.render('budgets/edit', {
+      budget
+    })
+  } catch (error) {
+    console.log(error)
+    res.redirect('/budgets')
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
   complete,
-  deleteBudget as delete
+  deleteBudget as delete,
+  edit
 }

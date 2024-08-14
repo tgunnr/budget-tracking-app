@@ -9,6 +9,7 @@ router.get('/', budgetsCtrl.index)
 
 // protected routes
 router.get('/:budgetId', isSignedIn, budgetsCtrl.show)
+router.get('/:budgetId/edit', isSignedIn, budgetsCtrl.edit)
 router.post('/', isSignedIn, budgetsCtrl.create)
 router.put('/:budgetId', isSignedIn, budgetsCtrl.update)
 router.patch('/:budgetId/complete', isSignedIn, budgetsCtrl.complete)

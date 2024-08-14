@@ -16,6 +16,17 @@
       </label>
       <button type="submit">Add Budget</button>
     </form>
+    <h3>Budgets:</h3>
+    <ul>
+      <% budgets.forEach(budget => { %>
+        <li>
+          <a href="/budgets/<%= budget._id %>">
+            <%= budget.name %>
+          </a> 
+          is <%= budget.complete ? 'all paid' : 'not all paid' %>
+        </li>
+      <% }) %>
+    </ul>
   <% } %>
 </section>
 

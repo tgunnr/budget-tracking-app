@@ -2,7 +2,9 @@
 <%- include('../partials/nav') %>
 
 <section>
-  
+  <%= if (user) { %>
+    <p><%= budget.name %></p>
+  <%= } %>
 </section>
 
 <%- include('../partials/footer') %>

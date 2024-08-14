@@ -3,6 +3,24 @@
 
 <section>
   <p>Welcome <%= user.username %>!</p>
+  <% if (user) { %>
+    <h2>New Expense</h2>
+    <form action="/budgets" method="POST">
+      <label>
+        Name: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Price: 
+        <input type="text" name="price" autocomplete="off">
+      </label>
+      <label>
+        Due Date: 
+        <input type="text" name="due" autocomplete="off">
+      </label>
+      <button type="submit">Add Expense</button>
+    </form>
+    <% } %>
 </section>
 
 <%- include('../partials/footer') %>

@@ -37,8 +37,20 @@ async function create(req, res) {
   }
 }
 
+async function update(req, res) {
+  try {
+    const budget = await Budget.findById(req.params.budgetId)
+    req.body.complete = !!req.body.complete
+    req.body.owner = req.session.user._id
+  } catch (error) {
+    console.log(error)
+    res.redirect('/budgets')
+  }
+}
+
 export {
   index,
   show,
   create,
+  update,
 }

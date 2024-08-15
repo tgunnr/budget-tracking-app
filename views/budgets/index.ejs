@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <p>Welcome <%= user.username %></p>
+  <p>Welcome <%= user.username %>!</p>
   <% if (user) { %>
     <h2>New Budget</h2>
     <form action="/budgets" method="POST">

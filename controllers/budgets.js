@@ -15,11 +15,11 @@ async function index(req, res) {
 async function show(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId).populate('owner')
-    console.log(budget)
+    console.log(budget, ('ha'))
     
-    res.render('budgets/show', (
+    res.render('budgets/show', {
       budget
-    ))
+  })
   } catch (error) {
     console.log(error)
     res.redirect('/budgets')

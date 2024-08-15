@@ -4,6 +4,7 @@
 <section>
   <p>Welcome <%= user.username %>!</p>
   <% if (user) { %>
+    <p><%= budget.name %></p>
     <h2>New Expense</h2>
     <form action="/budgets" method="POST">
       <label>

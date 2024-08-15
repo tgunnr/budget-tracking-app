@@ -24,6 +24,9 @@
             <%= budget.name %>
           </a> 
           is <%= budget.complete ? 'all paid' : 'not all paid' %>
+          <form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE</button>
+          </form>
         </li>
       <% }) %>
     </ul>

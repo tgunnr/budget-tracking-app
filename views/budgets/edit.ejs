@@ -1,4 +1,28 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<section>
+  <h1>Update Budget</h1>
+  <form action="/budgets/<%= budget._id %>?_method=PUT" method="POST">
+    <label>
+      Name: 
+      <input 
+        type="text"
+        name="name" 
+        value="<%= budget.name %>" 
+        autocomplete="off"
+      >
+    </label>
+    <label>
+      Tasty?
+      <input 
+        type="checkbox" 
+        name="complete" 
+				<%= budget.complete ? "checked" : "" %> 
+      >
+    </label>
+    <button type="submit">Update</button>
+  </form>
+</section>
+
 <%- include('../partials/footer') %>

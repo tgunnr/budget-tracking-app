@@ -45,9 +45,7 @@ async function update(req, res) {
       req.body.complete = !!req.body.complete
       await budget.updateOne(req.body)
       res.redirect(`/budgets/${budget._id}`)
-    } else {
-      throw new Error(`🚫 Not authorized 🚫`)
-    }
+    } 
   } catch (error) {
     console.log(error)
     res.redirect('/budgets')

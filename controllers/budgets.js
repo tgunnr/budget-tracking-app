@@ -94,8 +94,7 @@ async function edit(req, res) {
 async function addExpense(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
-    req.body.author = req.session.user._id
-    Budget.expenses.push(req.body)
+    budget.expenses.push(req.body)
     await budget.save()
     res.redirect(`/budgets/${budget._id}`)
   } catch (error) {
@@ -113,5 +112,5 @@ export {
   complete,
   deleteBudget as delete,
   edit,
-  addExpense
+  addExpense,
 }

@@ -20,7 +20,7 @@
         <input type="text" name="name" autocomplete="off">
       </label>
       <label>
-        Price: 
+        Price: $
         <input type="text" name="price" autocomplete="off">
       </label>
       <label>
@@ -32,7 +32,7 @@
     <ul>
       <% budget.expenses?.forEach(expense => { %>
         <li>
-          <%= expense.name %> <%= expense.price %> <%= expense.due %>
+          <%= expense.name %> is $<%= expense.price %> and due on <%= expense.due %>
         </li> 
         <% }) %>
       <% } %>

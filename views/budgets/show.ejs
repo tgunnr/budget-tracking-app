@@ -14,7 +14,7 @@
     </button>
   </form>
     <h2>New Expense</h2>
-    <form action="/budgets" method="POST">
+    <form action="/budgets/<%= budget._id %>/expenses" method="POST">
       <label>
         Name: 
         <input type="text" name="name" autocomplete="off">
@@ -29,7 +29,14 @@
       </label>
       <button type="submit">Add Expense</button>
     </form>
-    <% } %>
+    <ul>
+      <% budget.expenses?.forEach(expense => { %>
+        <li>
+          <%= expense.name %> <%= expense.price %> <%= expense.due %>
+        </li> 
+        <% }) %>
+      <% } %>
+    </ul>
 </section>
 
 <%- include('../partials/footer') %>

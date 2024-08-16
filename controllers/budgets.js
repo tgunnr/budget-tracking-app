@@ -95,7 +95,7 @@ async function addExpense(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
     req.body.author = req.session.user._id
-    Budget.comments.push(req.body)
+    Budget.expenses.push(req.body)
     await budget.save()
     res.redirect(`/budgets/${budget._id}`)
   } catch (error) {

@@ -41,8 +41,13 @@ async function create(req, res) {
 async function update(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
-    req.body.complete = !!req.body.complete
-    req.body.owner = req.session.user._id
+    if (budget.owner.equals(req.session.user._id)) {
+      req.body.complete = !!req.body.complete
+      await budget.updateOne(req.body)
+      res.redirect(`/budgets/${budget._id}`)
+    } else {
+      throw new Error(`🚫 Not authorized 🚫`)
+    }
   } catch (error) {
     console.log(error)
     res.redirect('/budgets')
@@ -78,6 +83,7 @@ async function deleteBudget(req, res) {
 async function edit(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
+    console.log('nope')
     res.render('budgets/edit', {
       budget
     })

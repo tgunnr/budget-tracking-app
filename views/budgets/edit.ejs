@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Update Budget</h1>
+  <h1>Update <%= budget.name %></h1>
   <form action="/budgets/<%= budget._id %>?_method=PUT" method="POST">
     <label>
       Name: 
@@ -21,7 +21,7 @@
 				<%= budget.complete ? "checked" : "" %> 
       >
     </label>
-    <button type="submit">Update</button>
+    <button type="submit">UPDATE</button>
   </form>
 </section>
 

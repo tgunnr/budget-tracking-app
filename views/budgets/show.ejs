@@ -5,6 +5,14 @@
   <p>Welcome <%= user.username %>!</p>
   <% if (user) { %>
     <p><%= budget.name %></p>
+    <form 
+    action="/budgets/<%= budget._id %>/complete?_method=PATCH" 
+    method="POST"
+  >
+    <button class="btn" type="submit">
+      All bills are  <%= budget.complete ? 'paid' : 'not paid' %>
+    </button>
+  </form>
     <h2>New Expense</h2>
     <form action="/budgets" method="POST">
       <label>

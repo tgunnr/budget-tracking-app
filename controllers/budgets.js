@@ -103,6 +103,19 @@ async function addExpense(req, res) {
   }
 }
 
+async function deleteExpense(req, res) {
+  try {
+    const budget = await Budget.findById(req.params.budgetId)
+    const expense = budget.expenses.id(req.params.expenseId)
+      budget.expenses.remove(expense)
+      await budget.save()
+      res.redirect(`/budgets/${budget._id}`)
+      console.log('man')
+  } catch (error) {
+    console.log(error)
+    res.redirect('/budgets')
+  }
+}
 
 export {
   index,
@@ -113,4 +126,5 @@ export {
   deleteBudget as delete,
   edit,
   addExpense,
+  deleteExpense
 }

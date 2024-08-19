@@ -32,6 +32,13 @@
     <ul>
       <% budget.expenses?.forEach(expense => { %>
         <li>
+          <form 
+          action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" 
+          method="POST"
+          class="inline"
+          >
+            <button class="btn" type="submit">DELETE</button>
+          </form>
           <%= expense.name %> is $<%= expense.price %> and due on <%= expense.due %>
         </li> 
         <% }) %>

@@ -20,10 +20,11 @@ This is a simple budget tracking app by Jonathan Cabrera.
   2. Ability to 
 5. Users can only see their own budgets.
 
-## Technolgies Used
+## Technologies Used
 * VS Code
 * Trello
 * Javascript
+* EJS
 * CSS
 * HTML
 * Node

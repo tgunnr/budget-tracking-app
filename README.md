@@ -1,12 +1,12 @@
 ![Budget Tracker App](./assets/img/screenshot.png)
 
-![Launch App](https://budget-tracking-app-5753c4b58f84.herokuapp.com)
+[Launch App](https://budget-tracking-app-5753c4b58f84.herokuapp.com)
 
 # Budget Tracker App
 This is a simple budget tracking app by Jonathan Cabrera.
 
 ## Planning material
-![Trello Planning Board](https://trello.com/b/KvIrNLsh)
+[Trello Planning Board](https://trello.com/b/KvIrNLsh)
 
 ## How to Use
 1. Create a new account.

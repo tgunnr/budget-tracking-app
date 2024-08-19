@@ -27,10 +27,11 @@ This is a simple budget tracking app by Jonathan Cabrera.
 * EJS
 * CSS
 * HTML
-* Node
+* Node.js
 * Mongoose
 * MongoDB
 * Express
+* Git
 * GitHub
 * Heroku
 

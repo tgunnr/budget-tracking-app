@@ -13,7 +13,10 @@ html {
 
 body {
   background-color: #1a1a1a;
-  color: #f6f6f6;
+  background-image: url(https://i.redd.it/j9pnl9wv8xm41.jpg);
+  background-position: 50%;
+  background-size: 60%;
+  color: black;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -22,7 +25,8 @@ body {
 
 nav {
   background-color: #f6f6f6;
-  color: #1a1a1a;
+  background-image: url(https://i.pinimg.com/736x/6a/a6/6b/6aa66ba1e9861293b0e547647f0a1b60.jpg);
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +70,7 @@ section {
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
 pre {

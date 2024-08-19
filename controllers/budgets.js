@@ -7,7 +7,6 @@ async function index(req, res) {
       budgets
     })
   } catch (error) {
-    console.log(error)
     res.redirect('/')
   }
 }
@@ -21,7 +20,6 @@ async function show(req, res) {
       budget
   })
   } catch (error) {
-    console.log(error)
     res.redirect('/budgets')
   }
 }
@@ -33,7 +31,6 @@ async function create(req, res) {
     const budget = await Budget.create(req.body)
     res.redirect(`/budgets/${budget._id}`)
   } catch (error) {
-    console.log(error)
     res.redirect('/')
   }
 }
@@ -47,7 +44,6 @@ async function update(req, res) {
       res.redirect(`/budgets/${budget._id}`)
     } 
   } catch (error) {
-    console.log(error)
     res.redirect('/budgets')
   }
 }
@@ -60,7 +56,6 @@ async function complete(req, res) {
     res.redirect(`/budgets/${budget._id}`)
     )
   } catch (error) {
-    console.lof(error)
     res.redirect('/budgets')
   }
 }
@@ -73,7 +68,6 @@ async function deleteBudget(req, res) {
       res.redirect('/budgets')
     }
   } catch (error) {
-    console.log(error)
     res.redirect('/budgets')
   }
 }
@@ -86,7 +80,6 @@ async function edit(req, res) {
       budget
     })
   } catch (error) {
-    console.log(error)
     res.redirect('/budgets')
   }
 }
@@ -98,7 +91,6 @@ async function addExpense(req, res) {
     await budget.save()
     res.redirect(`/budgets/${budget._id}`)
   } catch (error) {
-    console.log(error)
     res.redirect('/budgets')
   }
 }
@@ -110,9 +102,7 @@ async function deleteExpense(req, res) {
       budget.expenses.remove(expense)
       await budget.save()
       res.redirect(`/budgets/${budget._id}`)
-      console.log('man')
   } catch (error) {
-    console.log(error)
     res.redirect('/budgets')
   }
 }

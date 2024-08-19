@@ -17,7 +17,6 @@ This is a simple budget tracking app by Jonathan Cabrera.
     3. Mark budget as all paid, or unmark.
 4. Create new expenses for the budget.
     1. Ability to delete expenses.
-    2. Ability to 
 5. Users can only see their own budgets.
 
 ## Technologies Used

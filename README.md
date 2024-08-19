@@ -31,6 +31,8 @@ This is a simple budget tracking app by Jonathan Cabrera.
 * Mongoose
 * MongoDB
 * Express
+* GitHub
+* Heroku
 
 ## Credits
 Main background image found on Reddit.

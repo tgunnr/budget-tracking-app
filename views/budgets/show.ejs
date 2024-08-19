@@ -5,14 +5,11 @@
   <p>Welcome <%= user.username %>!</p>
   <% if (user) { %>
     <p><%= budget.name %></p>
-    <form 
-    action="/budgets/<%= budget._id %>/complete?_method=PATCH" 
-    method="POST"
-  >
-    <button class="btn" type="submit">
-      All bills are  <%= budget.complete ? 'paid' : 'not paid' %>
-    </button>
-  </form>
+      <form action="/budgets/<%= budget._id %>/complete?_method=PATCH" method="POST">
+        <button class="btn" type="submit">
+          All bills are  <%= budget.complete ? 'paid' : 'not paid' %>
+        </button>
+      </form>
     <h2>New Expense</h2>
     <form action="/budgets/<%= budget._id %>/expenses" method="POST">
       <label>
@@ -32,18 +29,14 @@
     <ul>
       <% budget.expenses?.forEach(expense => { %>
         <li>
-          <form 
-          action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" 
-          method="POST"
-          class="inline"
-          >
+          <form action="/budgets/<%= budget._id %>/expenses/<%= expense._id %>?_method=DELETE" method="POST" class="inline">
             <button class="btn" type="submit">DELETE</button>
           </form>
           <%= expense.name %> is $<%= expense.price %> and due on <%= expense.due %>
         </li> 
-        <% }) %>
-      <% } %>
+      <% }) %>
     </ul>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>

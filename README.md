@@ -22,7 +22,7 @@ This is a simple budget tracking app by Jonathan Cabrera.
 ## Technologies Used
 * VS Code
 * Trello
-* Javascript
+* JavaScript
 * EJS
 * CSS
 * HTML

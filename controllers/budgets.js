@@ -14,7 +14,6 @@ async function index(req, res) {
 async function show(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId).populate('owner')
-    console.log(budget, ('ha'))
     
     res.render('budgets/show', {
       budget
@@ -75,7 +74,6 @@ async function deleteBudget(req, res) {
 async function edit(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
-    console.log('nope')
     res.render('budgets/edit', {
       budget
     })

@@ -12,10 +12,8 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
-  background-image: url(https://i.redd.it/j9pnl9wv8xm41.jpg);
-  background-position: 50%;
-  background-size: 60%;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%2334923b' fill-opacity='0.11' fill-rule='evenodd'/%3E%3C/svg%3E");
   color: black;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -24,8 +22,8 @@ body {
 }
 
 nav {
-  background-color: #f6f6f6;
-  background-image: url(https://i.pinimg.com/736x/6a/a6/6b/6aa66ba1e9861293b0e547647f0a1b60.jpg);
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%2343ce40' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
   color: black;
   display: flex;
   align-items: center;

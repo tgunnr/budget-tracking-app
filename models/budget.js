@@ -6,7 +6,6 @@ const expenseSchema = new Schema({
   name: String,
   price: Number,
   due: Date,
-  author: {type: Schema.Types.ObjectId, ref: 'User'}
 }, {
   timestamps: true
 })

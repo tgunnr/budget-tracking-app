@@ -35,9 +35,8 @@ This is a simple budget tracking app by Jonathan Cabrera.
 * Heroku
 
 ## Credits
-Main background image found on Reddit.
-Nav background image found on LinkedIn.
-All images are from the Animal Crossing video games.
+[Background](https://heropatterns.com) Made using Hero Patterns.
+[Favicon](https://dodo.ac/np/images/c/c8/Animal_Crossing_Enciclopedia_Favicon.png) Found on [Nookipedia](https://nookipedia.com/wiki/Main_Page)
 
 ## Stretch Goals
 1. Ability to edit expenses.

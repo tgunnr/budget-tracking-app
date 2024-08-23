@@ -13,8 +13,7 @@ async function index(req, res) {
 
 async function show(req, res) {
   try {
-    const budget = await Budget.findById(req.params.budgetId).populate('owner')
-    
+    const budget = await Budget.findById(req.params.budgetId).populate('owner')    
     res.render('budgets/show', {
       budget
   })

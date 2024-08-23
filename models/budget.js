@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const expenseSchema = new Schema({
   name: String,
   price: Number,
-  due: String,
+  due: Date,
   author: {type: Schema.Types.ObjectId, ref: 'User'}
 }, {
   timestamps: true

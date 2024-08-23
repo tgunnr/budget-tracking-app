@@ -13,25 +13,27 @@
       <button class="btn" type="submit">Add Budget</button>
     </form>
     <h3>Budgets:</h3>
-    <ul>
-      <% budgets.forEach(budget => { %>
-        <% if (budget.owner.equals(user?._id)) { %>
-          <li>
-            <a href="/budgets/<%= budget._id %>">
-              <%= budget.name %>
-            </a> 
-            is <%= budget.complete ? 'all paid' : 'not all paid' %>
-          </li>
-          <a href="/budgets/<%= budget._id %>/edit">
-            <button class="btn" class="inline">EDIT</button>
-          </a>
-          </form>
-          <form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
-            <button class="btn" type="submit" class="inline">DELETE</button>
-          </form>
-        <% } %>
-      <% }) %>
-    </ul>
+    <div class="flex-container">
+      <ul>
+        <% budgets.forEach(budget => { %>
+          <% if (budget.owner.equals(user?._id)) { %>
+            <li>
+              <a href="/budgets/<%= budget._id %>">
+                <%= budget.name %>
+              </a> 
+              is <%= budget.complete ? 'all paid' : 'not all paid' %>
+            </li>
+            <a href="/budgets/<%= budget._id %>/edit">
+              <button class="btn" class="inline">EDIT</button>
+            </a>
+            </form>
+            <form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
+              <button class="btn" type="submit" class="inline">DELETE</button>
+            </form>
+          <% } %>
+        <% }) %>
+      </ul>
+    </div>
   <% } %>
 </section>
 

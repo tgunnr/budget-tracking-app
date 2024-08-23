@@ -95,9 +95,9 @@ async function deleteExpense(req, res) {
   try {
     const budget = await Budget.findById(req.params.budgetId)
     const expense = budget.expenses.id(req.params.expenseId)
-      budget.expenses.remove(expense)
-      await budget.save()
-      res.redirect(`/budgets/${budget._id}`)
+    budget.expenses.remove(expense)
+    await budget.save()
+    res.redirect(`/budgets/${budget._id}`)
   } catch (error) {
     res.redirect('/budgets')
   }

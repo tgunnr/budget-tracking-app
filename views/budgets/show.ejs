@@ -21,10 +21,10 @@
         <input type="text" name="price" autocomplete="off">
       </label>
       <label>
-        Due Date (mm/dd/yyyy): 
-        <input type="text" name="due" autocomplete="off">
+        Due Date: 
+        <input type="datetime-local" name="due" autocomplete="off">
       </label>
-      <button type="submit">Add Expense</button>
+      <button class="btn" type="submit">Add Expense</button>
     </form>
     <ul>
       <% budget.expenses?.forEach(expense => { %>

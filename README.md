@@ -37,7 +37,7 @@ This is a simple budget tracking app by Jonathan Cabrera.
 ## Credits
 [Background](https://heropatterns.com) made using Hero Patterns.
 
-[Favicon](https://dodo.ac/np/images/c/c8/Animal_Crossing_Enciclopedia_Favicon.png) found on [Nookipedia](https://nookipedia.com/wiki/Main_Page)
+[Favicon](https://dodo.ac/np/images/c/c8/Animal_Crossing_Enciclopedia_Favicon.png) found on [Nookipedia](https://nookipedia.com/wiki/Main_Page).
 
 ## Stretch Goals
 1. Ability to edit expenses.

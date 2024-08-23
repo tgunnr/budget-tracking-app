@@ -10,7 +10,7 @@
         Name: 
         <input type="text" name="name" autocomplete="off">
       </label>
-      <button type="submit">Add Budget</button>
+      <button class="btn" type="submit">Add Budget</button>
     </form>
     <h3>Budgets:</h3>
     <ul>
@@ -27,7 +27,7 @@
           </a>
           </form>
           <form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
-            <button type="submit" class="inline">DELETE</button>
+            <button class="btn" type="submit" class="inline">DELETE</button>
           </form>
         <% } %>
       <% }) %>
